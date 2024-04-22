@@ -1,8 +1,9 @@
-
+* {
+    color: white;
+}
 body
 {
     background-color: wheat;
-    margin: 0%;
 }
 .navbar
 {
@@ -11,7 +12,9 @@ body
 
 .flex-container
 {
-    background-color: wheat;
+    background-color: black;
+    margin: 15px;
+    border-radius: 15px;
     height: 60px;
     flex-flow: nowrap;
     padding: 10px;

@@ -3,7 +3,7 @@ function newButton(){
 var button = document.createElement('button');
       button.textContent = 'Rätsel ' + i;
       button.setAttribute("type", "button");
-      button.setAttribute("class", "btn btn-primary m-1");
+      button.setAttribute("class", "btn btn-primary m-1 flex-grow-1");
       i++;
       var div = document.getElementById('progress-buttons');
       div.appendChild(button);
