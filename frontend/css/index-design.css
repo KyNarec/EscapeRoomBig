@@ -1,20 +1,40 @@
+
+/* Color palette:
+    000000
+    363946
+    696773
+    819595
+    B1B6A6
+*/
+
+:root {
+    --background-color: #363946;
+}
+
 * {
-    color: white;
+    color: #FFF;
 }
-body
-{
-    background-color: wheat;
+
+body {
+    background-color: var(--background-color);
+    margin: 0%;
 }
-.navbar
-{
-    background-color: wheat;
+
+.navbar {
+    background-color: var(--background-color);
+
 }
+
+.navbar-brand {
+    color: #FFF;
+}
+
 
 .flex-container
 {
-    background-color: black;
     margin: 15px;
     border-radius: 15px;
+    background-color: var(--background-color);
     height: 60px;
     flex-flow: nowrap;
     padding: 10px;
