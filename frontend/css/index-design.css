@@ -1,12 +1,16 @@
 body
 {
-    background-color: aqua;
+    background-color: wheat;
     margin: 0%;
+}
+.navbar
+{
+    background-color: wheat;
 }
 
 .flex-container
 {
-    background-color: aquamarine;
+    background-color: wheat;
     height: 60px;
     flex-flow: nowrap;
     padding: 10px;
