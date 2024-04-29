@@ -1,4 +1,4 @@
-/* Color palette:
+/* Color palette(https://coolors.co/palette/000000-363946-696773-819595-b1b6a6):
     000000
     363946
     696773
@@ -8,6 +8,7 @@
 
 :root {
     --background-color: #363946;
+    --primary-color: #819595;
 }
 
 * {
