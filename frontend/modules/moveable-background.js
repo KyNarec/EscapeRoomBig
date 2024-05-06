@@ -1,25 +1,23 @@
-function moveablebackground(){
-    dragElement(document.createElement("backgroung-image"));
-    var pos = 0;
-    var run = true;
-    var mouseStart;
-    var mouseEnd;
-    var mouseDown = false;
-    var e = window.Event;
-    while(run == true){
-        if(e.onmousedown==true && mouseDown == false){
-            e = e || window.Event;
-            mouseStart = e.clientX;
-            mouseDown = true;
-        }
+dragElement(document.getElementById("moveable-image"));
 
-        if(mouseDown == true){
-            e = e || window.Event;
-            mouseEnd = e.clientX;
-            if(mouseEnd-mouseStart >= 0){
-                document.getElementById(backgroung-image).style.marginLeft(-1*(mouseEnd-mouseStart));
-            }
-
-        }
+function dragElement(elmnt) {
+    var pos3 = 0;
+    elmnt.onmousedown = dragMouseDown;
+    function dragMouseDown(e) {
+      e = e || window.event;
+      pos3 = e.clientX;
+      document.onmouseup = closeDragElement;
+      document.onmousemove = elementDrag;
     }
-}
+    function elementDrag(e) {
+      e = e || window.event;
+      var pos1 = pos3 - e.clientX;
+      pos3 = e.clientX;
+      elmnt.style.left = (elmnt.offsetLeft + pos1) + "px";
+      elmnt.style.top = (elmnt.offsetTop + pos1) + "px";
+    }
+    function closeDragElement() {
+      document.onmouseup = null;
+      document.onmousemove = null;
+    }
+  }
