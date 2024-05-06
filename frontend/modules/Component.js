@@ -36,6 +36,10 @@ export default class Component {
         node.appendChild(await this.#fragment);
     }
 
+    async prependTo(node = this.#target_node) {
+        node.prepend(await this.#fragment)
+    }
+
     remove() {
         document.getElementById(this.#comp_id);
     }
