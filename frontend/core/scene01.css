@@ -1,5 +1,5 @@
 #moveable-image{
     position: absolute;
-    height: 10%;
-    z-index: 9;
+    height: 100%;
+    cursor: move;
 }

@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html>
+<style>
+#mydiv {
+  position: absolute;
+    height: 100%;
+    cursor: move;
+}
+
+</style>
+<body>
+<div id="mydiv">
+  <img src="../../assets/images/szene1-test.jpg" height="100%">
+</div>
+
+<script>
 //Make the DIV element draggagle:
 dragElement(document.getElementById("mydiv"));
 
@@ -32,3 +48,7 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+</script>
+
+</body>
+</html>
