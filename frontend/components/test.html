@@ -1,7 +1,15 @@
-<style>
-    body {
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Show Image on Click</title>
+        <style>
+            body {
                 text-align: center;
-                height: 100%;
             }
             .image-container {
                 position: fixed;
@@ -36,9 +44,13 @@
                 max-width: 100%;
                 height: auto;
             }
-</style>
-<script>
-    function showImage() {
+        </style>
+    </head>
+    <body>
+        
+
+        <script>
+            function showImage() {
                 var imageContainer =
                     document.createElement("div");
                 imageContainer.className =
@@ -46,7 +58,8 @@
 
                 var image =
                     document.createElement("img");
-                image.src = "Unbenannt.jpg";
+                image.src =
+"https://media.geeksforgeeks.org/wp-content/uploads/20210915115837/gfg3.png";
                 var closeButton =
                     document.createElement(
                         "button"
@@ -70,14 +83,6 @@
                     imageContainer
                 );
             }
-    function show()
-    {
-        document.getElementById('unbennant').style.display="block";
-    }
-</script>
-<div>
-    <img src="Room-Desk.png" alt="Room-Desk" usemap="#workmap" id="Room">
-    <map name="workmap">
-        <area target="" alt="" title="" onclick="showImage()" coords="374,392,631,391,633,550,369,550" shape="poly">
-    </map>
-</div>
+        </script>
+    </body>
+</html>
