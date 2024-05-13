@@ -1,3 +1,4 @@
+
 @import "/frontend/utils/colors.css";
 
 * {
@@ -51,4 +52,15 @@
     width: 100%;
     position: sticky;
     z-index: 2;
+
+@import url("colors.css");
+
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+}
+
+nav {
+    padding: 5px 25px;
+    background-color: var(--primary-col);
 }

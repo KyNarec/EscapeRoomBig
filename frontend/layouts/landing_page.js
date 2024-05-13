@@ -1,15 +1,19 @@
-import Component from "../modules/Component.js";
+import Component from "../modules/component.js";
 
 export default class LandingPage {
-    constructor(){
-       this.#build(); 
-    }
+  constructor() {
+    this.#build();
+  }
 
-    async #build() {
-        const header = new Component('header');
-        const start_message = new Component('start_message');
-        const main = document.getElementsByTagName('main')[0];
-        await header.appendTo(main);
-        await start_message.appendTo(main);
-    }
+  // FIXME: Remove secene_sel
+
+  async #build() {
+    const header = new Component("header");
+    const scene_sel = new Component("scene_sel");
+    const start = new Component("start");
+    const main = document.getElementsByTagName("main")[0];
+    await header.appendTo(main);
+    await scene_sel.appendTo(main);
+    await start.appendTo(main);
+  }
 }
