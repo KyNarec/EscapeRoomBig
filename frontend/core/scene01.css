@@ -1,5 +1,22 @@
-#moveable-image{
+#mydiv {
     position: absolute;
-    height: 100%;
-    cursor: move;
+      height: 100%;
+      cursor: move;
+  }
+
+#posBut {
+    margin-left: 1000px;
+    margin-top: 200px;
+    color: rgb(163, 162, 162);
+    background-color: rgb(255, 254, 254);
+    border-color: white;
+    border: 2px solid;
+    border-radius: 50px;
+    transition: 1s;
+    position: absolute;
+}
+
+#posBut:hover {
+    background-color: black;
+    color: white;
 }
