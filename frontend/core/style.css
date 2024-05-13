@@ -2,4 +2,39 @@ nav {
     padding: 25px;
 }
 
-#start
+#start-escape-room {
+    
+}
+
+#scene-sel {
+    background-color: aquamarine;
+}
+
+#scene-sel > * {
+    width: 50px;
+    height: 50px;
+}
+
+.screen {
+    position: absolute;
+    left: 10vw;
+    top: 10vh;
+    width: 80vw;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 80vmin;
+}
+
+
+.screen > * {
+    width: 100%;
+    z-index: 0;
+    top: auto;
+}
+
+.screen > *:first-child {
+    top: 0px;
+    width: 100%;
+    position: sticky;
+    z-index: 2;
+}
