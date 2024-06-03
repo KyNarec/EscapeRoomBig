@@ -74,18 +74,19 @@
     {
         document.getElementById('unbennant').style.display="block";
     }
+    document.querySelector("#screen-interact").onclick=showImage();
 </script>
 <div>
-    <!--
-    <img src="Room-Desk.png" alt="Room-Desk" usemap="#workmap" id="Room">
+    <img src="/frontend/assets/images/Room-Desk.png" alt="" usemap="#workmap" id="Room">
     <map name="workmap">
-        <area target="" alt="" title="" onclick="showImage()" coords="374,392,631,391,633,550,369,550" shape="poly">
+        <area id="screen-interact" target="" alt="" title="" coords="374,392,631,391,633,550,369,550" shape="poly">
     </map>
     -->
 </div>
 
-<img src="/frontend/assets/images/Room-Desk.png" usemap="#screen-interact-map" alt="">
+<!-- onclick="showImage()" -->
+<!-- <img src="/frontend/assets/images/Room-Desk.png" usemap="#screen-interact-map" alt="">
 
 <map name="screen-interact-map">
     <area id="screen-interact" target="" alt="ScreenInteract" title="ScreenInteract" href="" coords="373,393,630,546" shape="rect" onclick="addScreen()">
-</map>
+</map> -->
