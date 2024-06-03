@@ -1,18 +1,22 @@
-@import "/frontend/utils/colors.css";
-
-* {
-    margin: 0;
+body {
     padding: 0;
+    margin: 0;
 }
 
+main {
+    margin: 0;
+}
+
+nav {
+    padding: 25px;
+}
 
 #scene-sel {
     padding: 0;
     min-width: 100%;
     display: flex;
-    background-color: var();
+    background-color: rgb(247, 255, 18);
     flex-wrap: wrap;
-    flex-basis: 50 100 0;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -27,12 +31,17 @@
 }
    
 #scene-sel > * {
+    height: 30px;
+    min-width: 50px;
     margin: 5px;
     color: #000;
     flex-grow: 1;
 }
 
 .screen {
+    position: absolute;
+    left: 10vw;
+    top: 10vh;
     width: 80vw;
     overflow: scroll;
     overflow-x: hidden;
@@ -46,7 +55,7 @@
     top: auto;
 }
 
-.screen:nth-child( -n + 2) {
+.screen > *:nth-child(-n+2) {
     top: 0px;
     width: 100%;
     position: sticky;
