@@ -46,7 +46,7 @@
     top: auto;
 }
 
-.screen > *:first-child {
+.screen > *:nth-child(-n + 2) {
     top: 0px;
     width: 100%;
     position: sticky;
