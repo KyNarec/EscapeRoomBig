@@ -1,24 +1,38 @@
-nav {
-    padding: 25px;
+@import "/frontend/utils/colors.css";
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
-#start-escape-room {
-    
-}
 
 #scene-sel {
-    background-color: aquamarine;
+    padding: 0;
+    min-width: 100%;
+    display: flex;
+    background-color: var(--primary-color);
+    flex-wrap: wrap;
+    flex-basis: 50 100 0;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+#scene-sel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#scene-sel {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+   
 #scene-sel > * {
-    width: 50px;
-    height: 50px;
+    margin: 5px;
+    color: #000;
+    flex-grow: 1;
 }
 
 .screen {
-    position: absolute;
-    left: 10vw;
-    top: 10vh;
     width: 80vw;
     overflow: scroll;
     overflow-x: hidden;

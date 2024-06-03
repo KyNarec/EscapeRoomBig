@@ -1,6 +1,6 @@
-import LandingPage from "../layouts/landing_page.js";
 import Component from "../modules/Component.js";
-import {Scenes}  from "../utils/scenes_enum.js"
+
+
 
 const main = await document.querySelector('main');
 
