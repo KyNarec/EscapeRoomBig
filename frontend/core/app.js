@@ -12,6 +12,37 @@ const screen_interact = document.querySelector('#screen-interact');
 const screen = new Component('screen');
 
 screen_interact.onclick = () => {
-    header.appendTo(main);
-    alert('adf');
+                var imageContainer =
+                    document.createElement("div");
+                imageContainer.className =
+                    "image-container";
+
+                var screen = new Component("screen");
+                screen.appendTo(imageContainer);
+
+                // var image =
+                //     document.createElement("img");
+                // image.src = "assets/images/whatsapp_chat.png";
+
+                var closeButton =
+                    document.createElement(
+                        "button"
+                    );
+                closeButton.textContent = "Close";
+                closeButton.className =
+                    "close-btn";
+                closeButton.onclick =
+                    function () {
+                        document.body.removeChild(
+                            imageContainer
+                        );
+                    };
+
+                imageContainer.appendChild(
+                    closeButton
+                );
+                
+                document.body.appendChild(
+                    imageContainer
+                );        
 }
