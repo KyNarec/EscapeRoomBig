@@ -15,7 +15,7 @@ screen_interact.onclick = () => {
                 var imageContainer =
                     document.createElement("div");
                 imageContainer.className =
-                    "image-container";
+                    "image-container screen";
 
                 var screen = new Component("screen");
                 screen.appendTo(imageContainer);
