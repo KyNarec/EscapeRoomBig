@@ -33,9 +33,6 @@
 }
 
 .screen {
-    position: absolute;
-    left: 10vw;
-    top: 10vh;
     width: 80vw;
     overflow: scroll;
     overflow-x: hidden;
