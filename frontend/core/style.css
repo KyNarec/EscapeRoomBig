@@ -10,7 +10,7 @@
     padding: 0;
     min-width: 100%;
     display: flex;
-    background-color: var(--primary-color);
+    background-color: var();
     flex-wrap: wrap;
     flex-basis: 50 100 0;
 }
