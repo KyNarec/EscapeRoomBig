@@ -1,7 +1,5 @@
 import Component from "../modules/Component.js";
 
-
-
 const main = await document.querySelector('main');
 
 const header = new Component('header')
