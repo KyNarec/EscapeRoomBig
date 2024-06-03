@@ -4,9 +4,45 @@ import Component from "../modules/Component.js";
 
 const main = await document.querySelector('main');
 
+const header = new Component('header')
+const scene2 = new Component('Szene_02_Daheim/index');
+await scene2.appendTo(document.querySelector('main'));
+const screen_interact = document.querySelector('#screen-interact');
 
-const header = new Component("header");
-const scene2 = new Component("Szene_02_Daheim/index");
+const screen = new Component('screen');
 
-await header.appendTo(main);
-scene2.appendTo(main);
+screen_interact.onclick = () => {
+                var imageContainer =
+                    document.createElement("div");
+                imageContainer.className =
+                    "image-container";
+
+                var screen = new Component("screen");
+                screen.appendTo(imageContainer);
+
+                // var image =
+                //     document.createElement("img");
+                // image.src = "assets/images/whatsapp_chat.png";
+
+                var closeButton =
+                    document.createElement(
+                        "button"
+                    );
+                closeButton.textContent = "Close";
+                closeButton.className =
+                    "close-btn";
+                closeButton.onclick =
+                    function () {
+                        document.body.removeChild(
+                            imageContainer
+                        );
+                    };
+
+                imageContainer.appendChild(
+                    closeButton
+                );
+                
+                document.body.appendChild(
+                    imageContainer
+                );        
+}
