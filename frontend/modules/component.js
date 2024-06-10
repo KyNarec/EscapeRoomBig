@@ -25,6 +25,7 @@ export default class Component {
         const fragment = document.createDocumentFragment(), div = document.createElement('div');
         div.innerHTML = html_str;
         div.id = this.#comp_id;
+        div.style = '';
         fragment.appendChild(div);
         return fragment;
     }
