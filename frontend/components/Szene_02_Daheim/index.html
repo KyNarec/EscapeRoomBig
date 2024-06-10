@@ -37,45 +37,6 @@
                 height: auto;
             }
 </style>
-<script>
-    function showImage() {
-                var imageContainer =
-                    document.createElement("div");
-                imageContainer.className =
-                    "image-container";
-
-                var image =
-                    document.createElement("img");
-                image.src = "Unbenannt.jpg";
-                var closeButton =
-                    document.createElement(
-                        "button"
-                    );
-                closeButton.textContent = "Close";
-                closeButton.className =
-                    "close-btn";
-                closeButton.onclick =
-                    function () {
-                        document.body.removeChild(
-                            imageContainer
-                        );
-                    };
-
-                imageContainer.appendChild(
-                    closeButton
-                );
-                imageContainer.appendChild(image);
-
-                document.body.appendChild(
-                    imageContainer
-                );
-            }
-    function show()
-    {
-        document.getElementById('unbennant').style.display="block";
-    }
-    document.querySelector("#screen-interact").onclick=showImage();
-</script>
 <div>
     <img src="/frontend/assets/images/Room-Desk.png" alt="" usemap="#workmap" id="Room">
     <map name="workmap">

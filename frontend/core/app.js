@@ -9,7 +9,11 @@ const screen_interact = document.querySelector('#screen-interact');
 
 const screen = new Component('screen');
 
-screen_interact.onclick = () => {
+window.addEventListener("click", function(e)
+{
+    if(document.getElementById("screen-interact").contains(e.target))
+
+{
                 var imageContainer =
                     document.createElement("div");
                 imageContainer.className =
@@ -17,10 +21,6 @@ screen_interact.onclick = () => {
 
                 var screen = new Component("screen");
                 screen.appendTo(imageContainer);
-
-                // var image =
-                //     document.createElement("img");
-                // image.src = "assets/images/whatsapp_chat.png";
 
                 var closeButton =
                     document.createElement(
@@ -44,3 +44,13 @@ screen_interact.onclick = () => {
                     imageContainer
                 );        
 }
+else
+{
+    document.body.removeChild(
+        imageContainer
+    );
+}
+}
+)
+
+// Da burgi räumt auf schau mal mal was wird
