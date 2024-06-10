@@ -1,11 +1,9 @@
-import Component from "../modules/component.js";
+import Component from "../modules/Component.js";
 
 export default class LandingPage {
   constructor() {
     this.#build();
   }
-
-  // FIXME: Remove secene_sel
 
   async #build() {
     const header = new Component("header");
