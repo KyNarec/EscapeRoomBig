@@ -3,7 +3,7 @@
 <html>
 <body>
 <div id="mydiv">
-  <button id="posBut" onclick="changePhotof">/\</a></button>
+  <button id="posBut" onclick="changePhotof()">/\</a></button>
   <img src="/frontend/assets/images/szene1-test.jpg" height="100%" id="background">
 </div>
 
@@ -47,8 +47,8 @@ function dragElement(elmnt) {
 function changePhotof(){
   position = position+1;
   let pic = pictures[position];
-  var change = "/frontend/assets/images/Szene01/" + pos;
-  document.getElementById("background").src="/frontend/assets/images/Szene01/Theresienstraße_1.jpg";
+  var change = "/frontend/assets/images/Szene01/" + pic;
+  document.getElementById("background").src=change;
 }
 </script>
 
