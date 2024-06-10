@@ -1,4 +1,6 @@
 import Component from "../modules/component.js";
+import SceneDisplay from "../modules/SceneDisplay.js";
+import { Scenes } from "../utils/scenesEnum.js";
 
 const main = document.querySelector('main');
 
@@ -7,6 +9,11 @@ const start = new Component('scene_sel');
 await header.appendTo(main);
 await start.appendTo(main);
 
+const scene2 = new Component(Scenes.Scene2);
+console.log("Debug: "+scene2);
+const sceneDisplay = new SceneDisplay(scene2);
+await sceneDisplay.displayScene()
+console.log("Debug: "+scene2);
 
 
 

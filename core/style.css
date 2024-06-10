@@ -1,6 +1,11 @@
 @import "colors.css";
 
+body {
+    background-color: #222;
+}
+
 * {
+    color: var(--primary-col);
     margin: 0;
     padding: 0;
 }
