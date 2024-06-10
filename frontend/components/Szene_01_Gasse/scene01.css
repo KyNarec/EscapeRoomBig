@@ -4,8 +4,8 @@
       cursor: move;
   }
 
-#posBut {
-    margin-left: 1000px;
+#forward {
+    margin-left: 63%;
     margin-top: 200px;
     color: rgb(163, 162, 162);
     background-color: rgb(255, 254, 254);
@@ -16,7 +16,7 @@
     position: absolute;
 }
 
-#posBut:hover {
+#forward:hover {
     background-color: black;
     color: white;
 }
