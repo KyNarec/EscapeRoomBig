@@ -9,6 +9,12 @@ nav {
     padding: 25px;
 }
 
+img {
+    display: inline;
+    height: 100vh;
+    margin: auto;
+}
+
 #scene-sel {
     padding: 0;
     min-width: 100%;
@@ -58,6 +64,7 @@ nav {
     width: 100%;
     position: sticky;
     z-index: 2;
+}
 
 @import url("colors.css");
 
@@ -69,4 +76,11 @@ nav {
 nav {
     padding: 5px 25px;
     background-color: var(--primary-col);
+}
+
+
+img {
+    display: inline;
+    height: 100vh;
+    margin: auto;
 }
