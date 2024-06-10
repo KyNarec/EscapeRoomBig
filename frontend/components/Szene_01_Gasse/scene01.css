@@ -20,3 +20,37 @@
     background-color: black;
     color: white;
 }
+
+#backward {
+    margin-left: 300%;
+    margin-top: 10%;
+    color: orangered;
+    background-color: orange;
+    border-color: orangered;
+    border: 2px solid;
+    border-radius: 50px;
+    transition: 1s;
+    position: absolute;
+}
+
+#backward:hover {
+    background-color: orangered;
+    color: white    ;
+}
+
+#inter {
+    margin-left: 300%;
+    margin-top: 10%;
+    color: orangered;
+    background-color: orange;
+    border-color: orangered;
+    border: 2px solid;
+    border-radius: 50px;
+    transition: 1s;
+    position: absolute;
+}
+
+#inter:hover {
+    background-color: orangered;
+    color: white    ;
+}
