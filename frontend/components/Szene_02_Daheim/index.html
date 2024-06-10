@@ -37,55 +37,9 @@
                 height: auto;
             }
 </style>
-<script>
-    function showImage() {
-                var imageContainer =
-                    document.createElement("div");
-                imageContainer.className =
-                    "image-container";
-
-                var image =
-                    document.createElement("img");
-                image.src = "Unbenannt.jpg";
-                var closeButton =
-                    document.createElement(
-                        "button"
-                    );
-                closeButton.textContent = "Close";
-                closeButton.className =
-                    "close-btn";
-                closeButton.onclick =
-                    function () {
-                        document.body.removeChild(
-                            imageContainer
-                        );
-                    };
-
-                imageContainer.appendChild(
-                    closeButton
-                );
-                imageContainer.appendChild(image);
-
-                document.body.appendChild(
-                    imageContainer
-                );
-            }
-    function show()
-    {
-        document.getElementById('unbennant').style.display="block";
-    }
-    document.querySelector("#screen-interact").onclick=showImage();
-</script>
 <div>
     <img src="/frontend/assets/images/Room-Desk.png" alt="" usemap="#workmap" id="Room">
     <map name="workmap">
         <area id="screen-interact" target="" alt="" title="" coords="374,392,631,391,633,550,369,550" shape="poly">
     </map>
 </div>
-
-<!-- onclick="showImage()" -->
-<!-- <img src="/frontend/assets/images/Room-Desk.png" usemap="#screen-interact-map" alt="">
-
-<map name="screen-interact-map">
-    <area id="screen-interact" target="" alt="ScreenInteract" title="ScreenInteract" href="" coords="373,393,630,546" shape="rect" onclick="addScreen()">
-</map> -->
