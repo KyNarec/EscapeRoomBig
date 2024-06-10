@@ -19,7 +19,7 @@ export default class Component {
     }
 
     async #createFrag() {
-        const response = await fetch('/frontend/components/'+this.#comp_name+'.html');
+        const response = await fetch('/components/'+this.#comp_name+'.html');
         const html_str = await response.text();
 
         const fragment = document.createDocumentFragment(), div = document.createElement('div');

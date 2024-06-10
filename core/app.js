@@ -1,9 +1,17 @@
-import Component from "../modules/Component.js";
+import Component from "../modules/component.js";
 
-const main = await document.querySelector('main');
+const main = document.querySelector('main');
 
-const header = new Component('header')
-const scene2 = new Component('Szene_02_Daheim/index');
+const header = new Component('header');
+const start = new Component('scene_sel');
+await header.appendTo(main);
+await start.appendTo(main);
+
+
+
+
+
+/* const scene2 = new Component('Szene_02_Daheim/index');
 await scene2.appendTo(document.querySelector('main'));
 const screen_interact = document.querySelector('#screen-interact');
 
@@ -43,4 +51,4 @@ screen_interact.onclick = () => {
                 document.body.appendChild(
                     imageContainer
                 );        
-}
+} */

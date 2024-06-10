@@ -1,0 +1,28 @@
+@import "colors.css";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.screen {
+    width: 80vw;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 80vmin;
+}
+
+
+.screen > * {
+    width: 100%;
+    z-index: 0;
+    top: auto;
+}
+
+.screen:nth-child( -n + 2) {
+    top: 0px;
+    width: 100%;
+    position: sticky;
+    z-index: 2;
+}
