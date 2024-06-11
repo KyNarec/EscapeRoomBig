@@ -1,0 +1,56 @@
+#mydiv {
+    position: absolute;
+      height: 100%;
+      cursor: move;
+  }
+
+#forward {
+    margin-left: 63%;
+    margin-top: 10%;
+    color: rgb(163, 162, 162);
+    background-color: rgb(255, 254, 254);
+    border-color: white;
+    border: 2px solid;
+    border-radius: 50px;
+    transition: 1s;
+    position: absolute;
+}
+
+#forward:hover {
+    background-color: black;
+    color: white;
+}
+
+#backward {
+    margin-left: 300%;
+    margin-top: 10%;
+    color: orangered;
+    background-color: orange;
+    border-color: orangered;
+    border: 2px solid;
+    border-radius: 50px;
+    transition: 1s;
+    position: absolute;
+}
+
+#backward:hover {
+    background-color: orangered;
+    color: white    ;
+}
+
+#inter {
+    margin-left: 300%;
+    margin-top: 10%;
+    color: orangered;
+    background-color: orange;
+    border-color: orangered;
+    border: 2px solid;
+    border-radius: 50px;
+    transition: 1s;
+    position: absolute;
+}
+
+#inter:hover {
+    background-color: orangered;
+    color: white    ;
+}
