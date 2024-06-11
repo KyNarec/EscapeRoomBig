@@ -7,4 +7,4 @@ customElements.define('custom-comp', Component);
 let button = document.querySelector('#btn-desktop');
 addEventListener("click", (e) => {
     alert('hi');
-})
+})  
