@@ -22,6 +22,10 @@ export default class Component extends HTMLElement {
     attributeChangedCallback(name, oldValue, newValue) {
         switch (name) {
             case 'src':
+                if (oldValue == newValue) {
+                    break;
+                }
+                console.debug(oldValue, newValue)
                 this.loadComponent(newValue);
                 break;
             default:
@@ -38,6 +42,7 @@ export default class Component extends HTMLElement {
 
         const fragment = document.createDocumentFragment();
         const childCount = await tempDiv.childElementCount;
+        console.debug(childCount)
         for (let i = 0; i < childCount; i++) {
             fragment.appendChild(tempDiv.children[0]);
         }

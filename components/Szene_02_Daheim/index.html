@@ -1,13 +1,45 @@
 <style>
-    #img-home {
-        width: min(calc(100vh - 6.5rem ), 100vw);
-        display: block;
-        margin: auto;
-    }
+    body {
+                text-align: center;
+                height: 100%;
+            }
+            .image-container {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: white;
+                border: 1px solid #ccc;
+                padding: 10px;
+                box-shadow: 0 0 10px
+                    rgba(0, 0, 0, 0.2);
+                z-index: 9999;
+                max-width: 80%;
+                max-height: 80%;
+                overflow: auto;
+            }
+
+            /* Styling for the close button */
+            .close-btn {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                background-color: #f44336;
+                color: white;
+                border: none;
+                padding: 5px 10px;
+                cursor: pointer;
+            }
+
+            /* Styling for the image */
+            .image-container img {
+                max-width: 100%;
+                height: auto;
+            }
 </style>
 <div>
-    <img id="img-home" src="/assets/images/Room-Desk.png" alt="Room-Desk" usemap="#workmap" id="Room">
+    <img src="/assets/images/Room-Desk.png" alt="" usemap="#workmap" id="Room">
     <map name="workmap">
-        <area id="img-home-interact" target="" alt="" title="" coords="374,392,631,391,633,550,369,550" shape="poly">
+        <area id="screen-interact" target="" alt="" title="" coords="374,392,631,391,633,550,369,550" shape="poly">
     </map>
 </div>

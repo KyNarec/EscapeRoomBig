@@ -60,7 +60,7 @@ function dragElement(elmnt) {
 
   function intersectionButton(pos){
     let pic = pictures[pos];
-    var change = "/frontend/assets/images/Szene01/" + pic;
+    var change = "/assets/images/Szene01/" + pic;
     document.getElementById("background").src=change;
     buttonf.style.marginLeft=ButPosFX[pos];
     buttonb.style.marginLeft=ButPosBX[pos];
