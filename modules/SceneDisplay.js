@@ -16,9 +16,8 @@ export default class SceneDisplay {
         if(this.#component) {
             this.#component.remove();
         }
-        console.log("Debug: "+component)
+        
         this.#component = component;
-        console.log("Debug: "+this.#component)
         await component.appendTo(this.#main);
     }
 }
