@@ -12,7 +12,7 @@ export default class Component extends HTMLElement {
     }
 
     connectedCallback() {
-        this.shadow = this.attachShadow({mode: "open"});
+        //this.shadow = this.attachShadow({mode: "open"});
     }
 
     disconnectedCallback() {}
@@ -46,7 +46,7 @@ export default class Component extends HTMLElement {
         for (let i = 0; i < childCount; i++) {
             fragment.appendChild(tempDiv.children[0]);
         }
-
-        this.shadow.appendChild(fragment);
+        this.appendChild(fragment);
+        //this.shadow.appendChild(fragment);
     }
 }
