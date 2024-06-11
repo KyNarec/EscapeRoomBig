@@ -1,6 +1,9 @@
-//Make the DIV element draggagle:
-dragElement(document.getElementById("mydiv"));
+import waitForElm from "../../utils/waitForElemnt";
 
+//Make the DIV element draggagle:
+await waitForElm('#mydiv');
+alert(document.querySelector('#mydiv'))
+dragElement(document.getElementById("mydiv"));
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     /* if present, the header is where you move the DIV from:*/
