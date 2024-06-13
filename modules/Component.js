@@ -41,11 +41,12 @@ export default class Component extends HTMLElement {
         tempDiv.innerHTML = await response.text(); 
 
         const fragment = document.createDocumentFragment();
-        const childCount = await tempDiv.childElementCount;
-        console.debug(childCount)
+        const childCount = tempDiv.childElementCount;
+
         for (let i = 0; i < childCount; i++) {
             fragment.appendChild(tempDiv.children[0]);
         }
+        this.innerHTML = '';
         this.appendChild(fragment);
         //this.shadow.appendChild(fragment);
     }
