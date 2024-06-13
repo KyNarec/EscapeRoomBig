@@ -4,7 +4,7 @@ export default class Component extends HTMLElement {
     shadow;
 
     static get observedAttributes() {
-        return ['src'];
+        return ['name'];
     }
 
     constructor() {
@@ -21,7 +21,7 @@ export default class Component extends HTMLElement {
 
     attributeChangedCallback(name, oldValue, newValue) {
         switch (name) {
-            case 'src':
+            case 'name':
                 if (oldValue == newValue) {
                     break;
                 }
@@ -33,9 +33,9 @@ export default class Component extends HTMLElement {
         }
     }
 
-    async loadComponent(path) {
-        const response = await fetch(path);
-        if (!response.ok) throw Error('Could not fetch path: '+path);
+    async loadComponent(name) {
+        const response = await fetch('/components/'+name+'.html');
+        if (!response.ok) throw Error('Could not fetch component: '+name);
 
         const tempDiv  = document.createElement('div');
         tempDiv.innerHTML = await response.text(); 
