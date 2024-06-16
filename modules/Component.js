@@ -12,7 +12,7 @@ export default class Component extends HTMLElement {
     }
 
     connectedCallback() {
-        //this.shadow = this.attachShadow({mode: "open"});
+
     }
 
     disconnectedCallback() {}
@@ -25,7 +25,7 @@ export default class Component extends HTMLElement {
                 if (oldValue == newValue) {
                     break;
                 }
-                console.debug(oldValue, newValue)
+                console.debug(name+'changed from '+oldValue+' to '+newValue);
                 this.loadComponent(newValue);
                 break;
             default:
@@ -34,6 +34,9 @@ export default class Component extends HTMLElement {
     }
 
     async loadComponent(name) {
+        if(name == 0) {
+            return;
+        }
         const response = await fetch('/components/'+name+'.html');
         if (!response.ok) throw Error('Could not fetch component: '+name);
 

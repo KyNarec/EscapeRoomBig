@@ -1,11 +1,22 @@
 <style>
-    #img-room-desk {
-        height: 100%;
+    #svg-room-desk {
+        width: min(calc(100vh - 65px), 100vw);
         display: block;
         margin: auto;
+        height: 100%;
+        top: -200px;
     }
 </style>
-<img id="img-room-desk" src="/assets/images/Room-Desk.png" alt="Home with desktop" usemap="#room-desk-map">
-<map name="room-desk-map">
-    <area id="area-open-pc" coords="134,362,900,692" shape="rect">
-</map>
+<svg id="svg-room-desk" viewBox="0 0 100 100">
+    <image id="img-room-desk" href="/assets/images/Room-Desk.png" alt="Home with desktop" width="100%"></image>
+    <rect
+        fill-opacity="00"
+        width="30"
+        height="20"
+        x="35"
+        y="37" 
+        id="area-open-pc"
+        />
+    
+
+</svg>
