@@ -77,3 +77,11 @@ function dragElement(elmnt) {
       buttoni.style.marginLeft="";
     }
   }
+
+  function zoom(){
+    var zoomElm = document.getElementById("background");
+    for(var i = 0; i < 200; i++){
+      zoomElm.style.height = i + "%";
+      zoomElm.style.marginTop = i + "%";
+    }
+  }
