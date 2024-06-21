@@ -1,4 +1,4 @@
-import Component from "../modules/Component.js";
+import Component from "../modules/component.js";
 
 export default class LandingPage {
   constructor() {
