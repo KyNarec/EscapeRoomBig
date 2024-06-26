@@ -13,3 +13,7 @@ map {
     background-color: aquamarine;
     z-index: 100;
 }
+/* 
+#scene > *:not(#schloss-container) {
+    filter: blur(3px);
+}   */
