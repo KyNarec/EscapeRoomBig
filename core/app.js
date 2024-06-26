@@ -20,18 +20,12 @@ document.body.addEventListener("mousedown", (e) => {
             return;
         }
     })
-    if(bCloseModals) openModals.forEach((modal) => { modal.remove(); });
+    if(!bCloseModals) return;
+    openModals.forEach((modal) => { modal.remove(); });
+    document.body.querySelectorAll("*").forEach((e) => {
+        e.style.filter = "";
+    })
 });
-
-// await waitForElm('#area-open-pc');
-// const areaOpenPc = document.querySelector('#area-open-pc');
-// areaOpenPc.addEventListener("click", () => {
-//     const pc = document.createElement('custom-comp');
-//     pc.setAttribute('name', 'computer');
-//     pc.classList.add('modal');
-//     document.body.appendChild(pc);
-//     openModals.push(pc);
-// });
 
 await waitForElm('#area-open-tuer');
 const areaOpenTuer = document.querySelector('#area-open-tuer');
@@ -41,12 +35,12 @@ areaOpenTuer.addEventListener("click", () => {
     schloss.classList.add('modal');
     document.body.appendChild(schloss);
     openModals.push(schloss);
-    const blur = document.createElement('div');
-    // blur.style = "backdrop-filter: blur(10px); z-index: 100; background-color: black; width: 100vw; height: 100vh; position: absolute";
-    blur.style = "backdrop-filter: blur(10px); background-color: black; width: 100vw; height: 100vh; display: block; position: absolute";
-    blur.id = 'computer-container'
-    blur.classList.add('modal');
-    document.body.appendChild(blur);
+    //Blur effect for everything exept for the  opened area
+    const elementsToBlur = document.querySelectorAll("#scene");
+    elementsToBlur.forEach((e) => {
+        e.style.filter = "blur(3px)";
+    })
+    document.body.appendChild(element);
 });
 
 await waitForElm('#area-open-kreuz');
@@ -57,6 +51,10 @@ areaOpenKreuz.addEventListener("click", () => {
     kreuz.classList.add('modal');
     document.body.appendChild(kreuz);
     openModals.push(kreuz);
+    //Blur effect for everything exept for the  opened area
+    const elementsToBlur = document.querySelectorAll("#scene");
+    elementsToBlur.forEach((e) => {
+        e.style.filter = "blur(3px)";
+    })
+    document.body.appendChild(element);
 });
-
-//schwarzes bild ist immernoch unten
