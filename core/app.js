@@ -1,4 +1,4 @@
-import Component from "../modules/component.js";
+import Component from "../modules/Component.js";
 import childHasParent from "../utils/childHasParent.js";
 import waitForElm from "../utils/waitForElemnt.js";
 
