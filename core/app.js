@@ -1,4 +1,4 @@
-import Component from "../modules/Component.js";
+import Component from "../modules/component.js";
 import childHasParent from "../utils/childHasParent.js";
 import waitForElm from "../utils/waitForElemnt.js";
 
@@ -35,7 +35,7 @@ areaOpenTuer.addEventListener("click", () => {
     schloss.classList.add('modal');
     document.body.appendChild(schloss);
     openModals.push(schloss);
-    //Blur effect for everything exept for the  opened area
+    //Blur effect for everything except for the opened area
     const elementsToBlur = document.querySelectorAll("#scene");
     elementsToBlur.forEach((e) => {
         e.style.filter = "blur(3px)";
