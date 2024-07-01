@@ -35,7 +35,7 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
-  var position = 0;
+  var position = 6;
   const pictures = ["Theresienstraße_1.jpg","Theresienstraße_2.jpg","Theresienstraße_3.jpg","Kreuzung_Theresienstraße.jpg","Theresienstraße_4.jpg","Theresienstraße_5.jpg","Dietrich-Bonhoeffer-Platz_1.jpg","Dietrich-Bonhoeffer-Platz_2.jpg","Dietrich-Bonhoeffer-Platz_3.jpg","Dietrich-Bonhoeffer-Platz_4.jpg","Dietrich-Bonhoeffer-Platz_5.jpg","Dietrich-Bonhoeffer-Platz_6.jpg","Rosengasse_3.jpg","Rosengasse_2.jpg","Rosengasse_1.jpg"];
   const ButPosFX = ["63%","60%","61%","82%","20%","50%","48%","40%","65%","60%","60%","200%","17%","17%","200%"]; 
   const ButPosBX = ["","15%","15%","39%","64%","19%","23%","10%","22%","20%","18%","15%","","60%","70%"];
@@ -43,12 +43,22 @@ function dragElement(elmnt) {
     buttonf.onclick=()=>{
           position = position+1;
           intersectionButton(position);
+          if(position==7){
+             document.getElementById("show-map").style.display="block";
+          }else{
+            document.getElementById("show-map").style.display="none";
+          }
     }
 
   var buttonb = document.getElementById("backward");
   buttonb.onclick=()=>{
     position = position-1;
     intersectionButton(position);
+    if(position==7){
+      document.getElementById("show-map").style.display="block";
+   }else{
+     document.getElementById("show-map").style.display="none";
+   }
   }
 
   var buttoni = document.getElementById("inter");
@@ -59,7 +69,26 @@ function dragElement(elmnt) {
       position = 3;
     }
     intersectionButton(position);
+    if(position==7){
+      document.getElementById("show-map").style.display="block";
+   }else{
+     document.getElementById("show-map").style.display="none";
+   }
   }
+
+  var mapbut = document.getElementById("show-map");
+  mapbut.onclick=()=>{
+    document.getElementById("map").style.visibility="visible";
+    document.getElementById("leavebut").style.display="block";
+  }
+
+  var leavbut = document.getElementById("leavebut")
+  leavbut.onclick=()=>{
+    leavbut.style.display="none";
+    document.getElementById("map").style.visibility="hidden";
+  }
+
+
 
   function intersectionButton(pos){
     let pic = pictures[pos];
