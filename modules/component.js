@@ -1,3 +1,6 @@
+import waitForElm from "../utils/waitForElemnt.js";
+import { openModals } from "../core/app.js";
+
 export default class Component extends HTMLElement {
 
     /**@type {ShadowRoot} */
