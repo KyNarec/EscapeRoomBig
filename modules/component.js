@@ -1,3 +1,6 @@
+import waitForElm from "../utils/waitForElemnt.js";
+import { openModals } from "../core/app.js";
+
 export default class Component extends HTMLElement {
 
     /**@type {ShadowRoot} */
@@ -52,5 +55,9 @@ export default class Component extends HTMLElement {
         this.innerHTML = '';
         this.appendChild(fragment);
         //this.shadow.appendChild(fragment);
+
+        const script = await fetch('/components/'+name+'.js');
+        if (!script.ok) return;
+        await eval(await script.text());
     }
 }

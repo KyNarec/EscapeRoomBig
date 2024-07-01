@@ -4,16 +4,16 @@
     color: black;
 }
 
+body {
+    background-image: linear-gradient(to bottom, var(--secondary-col) 75px, #222 150px)
+}
+
 #scene {
     display: block;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 115px);
 }
 
 map {
     background-color: aquamarine;
     z-index: 100;
 }
-/* 
-#scene > *:not(#schloss-container) {
-    filter: blur(3px);
-}   */

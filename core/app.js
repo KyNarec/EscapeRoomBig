@@ -6,11 +6,10 @@ import waitForElm from "../utils/waitForElemnt.js";
 customElements.define('custom-comp', Component);
 
 /**@type {Array} */
-let openModals = [];
+export let openModals = [];
 
 // register Events
 document.body.addEventListener("mousedown", (e) => {
-    
     // Close open modal on mouse click
     let bCloseModals = true;
     if(openModals.length < 1) return;

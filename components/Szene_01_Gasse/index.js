@@ -1,4 +1,5 @@
-import waitForElm from "../../utils/waitForElemnt.js";
+//import waitForElm from "../../utils/waitForElemnt.js";
+!async function() {
 
 //Make the DIV element draggagle:
 await waitForElm('#mydiv');
@@ -106,3 +107,4 @@ function dragElement(elmnt) {
       buttoni.style.marginLeft="";
     }
   }
+}();
