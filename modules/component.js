@@ -52,5 +52,9 @@ export default class Component extends HTMLElement {
         this.innerHTML = '';
         this.appendChild(fragment);
         //this.shadow.appendChild(fragment);
+
+        const script = await fetch('/components/'+name+'.js');
+        if (!script.ok) return;
+        await eval(await script.text());
     }
 }
