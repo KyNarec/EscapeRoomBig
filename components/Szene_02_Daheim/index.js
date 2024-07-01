@@ -1,5 +1,3 @@
-alert('fhjkld');
-
 !async function() {
     await waitForElm('#area-open-pc');
     const areaOpenKreuz = document.querySelector('#area-open-pc');
