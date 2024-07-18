@@ -36,7 +36,7 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
-  var position = 14;
+  var position = 12;
   const pictures = ["Theresienstraße_1.jpg","Theresienstraße_2.jpg","Theresienstraße_3.jpg","Kreuzung_Theresienstraße.jpg","Theresienstraße_4.jpg","Theresienstraße_5.jpg","Dietrich-Bonhoeffer-Platz_1.jpg","Dietrich-Bonhoeffer-Platz_2.jpg","Dietrich-Bonhoeffer-Platz_3.jpg","Dietrich-Bonhoeffer-Platz_4.jpg","Dietrich-Bonhoeffer-Platz_5.jpg","Dietrich-Bonhoeffer-Platz_6.jpg","Rosengasse_3.jpg","Rosengasse_2.jpg","Rosengasse_1.jpg"];
   const ButPosFX = ["63%","60%","61%","82%","20%","50%","48%","40%","65%","60%","60%","200%","17%","17%","200%"]; 
   const ButPosBX = ["","15%","15%","39%","64%","19%","23%","10%","22%","20%","18%","15%","","60%","70%"];
