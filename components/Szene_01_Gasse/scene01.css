@@ -54,3 +54,46 @@
     background-color: orangered;
     color: white    ;
 }
+
+#map{
+    position: absolute;
+    margin-left: -98%;
+    height: 90%;
+    visibility:hidden; 
+}
+
+#show-map{
+    display:none;
+    margin-left: 19%;
+    position: absolute;
+    margin-top: 12%;
+    color: orangered;
+    background-color: orange;
+    border-color: orangered;
+    border: 2px solid;
+    border-radius: 50px;
+    transition: 1s;
+}
+
+#show-map:hover{
+    background-color: orangered;
+    color: white;
+}
+
+#leavebut{
+    display:none;
+    margin-left: 27%;
+    position: absolute;
+    margin-top: -4%;
+    color: orangered;
+    background-color: orange;
+    border-color: orangered;
+    border: 2px solid;
+    border-radius: 50px;
+    transition: 1s;
+}
+
+#leavebut:hover{
+    background-color: orangered;
+    color: white;
+}

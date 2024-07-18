@@ -1,4 +1,5 @@
-import waitForElm from "../../utils/waitForElemnt.js";
+//import waitForElm from "../../utils/waitForElemnt.js";
+!async function() {
 
 //Make the DIV element draggagle:
 await waitForElm('#mydiv');
@@ -43,12 +44,22 @@ function dragElement(elmnt) {
     buttonf.onclick=()=>{
           position = position+1;
           intersectionButton(position);
+          if(position==7){
+             document.getElementById("show-map").style.display="block";
+          }else{
+            document.getElementById("show-map").style.display="none";
+          }
     }
 
   var buttonb = document.getElementById("backward");
   buttonb.onclick=()=>{
     position = position-1;
     intersectionButton(position);
+    if(position==7){
+      document.getElementById("show-map").style.display="block";
+   }else{
+     document.getElementById("show-map").style.display="none";
+   }
   }
 
   var buttoni = document.getElementById("inter");
@@ -59,7 +70,26 @@ function dragElement(elmnt) {
       position = 3;
     }
     intersectionButton(position);
+    if(position==7){
+      document.getElementById("show-map").style.display="block";
+   }else{
+     document.getElementById("show-map").style.display="none";
+   }
   }
+
+  var mapbut = document.getElementById("show-map");
+  mapbut.onclick=()=>{
+    document.getElementById("map").style.visibility="visible";
+    document.getElementById("leavebut").style.display="block";
+  }
+
+  var leavbut = document.getElementById("leavebut")
+  leavbut.onclick=()=>{
+    leavbut.style.display="none";
+    document.getElementById("map").style.visibility="hidden";
+  }
+
+
 
   function intersectionButton(pos){
     let pic = pictures[pos];
@@ -77,11 +107,4 @@ function dragElement(elmnt) {
       buttoni.style.marginLeft="";
     }
   }
-
-  function zoom(){
-    var zoomElm = document.getElementById("background");
-    for(var i = 0; i < 200; i++){
-      zoomElm.style.height = i + "%";
-      zoomElm.style.marginTop = i + "%";
-    }
-  }
+}();
